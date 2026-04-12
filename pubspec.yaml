@@ -30,7 +30,7 @@ dependencies:
   dropdown_button2: ^2.0.0
   local_auth: ^2.1.6
   connectivity_plus: ^6.0.5
-  share_plus: ^10.1.4
+  share_plus: ^9.0.0
   flutter_local_notifications: ^16.3.0
   supabase_flutter: ^2.0.0
   flutter_dotenv: ^5.1.0
