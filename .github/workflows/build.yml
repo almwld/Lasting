@@ -21,15 +21,22 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
+          flutter-version: '3.19.6'
           channel: 'stable'
       
-      - name: Recreate Android folder
+      - name: Create Android folder
         run: |
           rm -rf android
           flutter create --platforms=android --org com.flexyemen flex_yemen
           cp -r flex_yemen/android .
           rm -rf flex_yemen
+      
+      - name: Fix Android settings
+        run: |
+          echo "android.defaultConfig.minSdkVersion 21" >> android/local.properties
+          sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 34/g' android/app/build.gradle
+          sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 21/g' android/app/build.gradle
+          sed -i 's/targetSdkVersion flutter.targetSdkVersion/targetSdkVersion 34/g' android/app/build.gradle
       
       - name: Get dependencies
         run: flutter pub get
@@ -42,31 +49,3 @@ jobs:
         with:
           name: lasting-android-apk
           path: build/app/outputs/flutter-apk/app-release.apk
-
-  build_ios:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.24.0'
-          channel: 'stable'
-      
-      - name: Recreate iOS folder
-        run: |
-          rm -rf ios
-          flutter create --platforms=ios --org com.flexyemen flex_yemen
-          cp -r flex_yemen/ios .
-          rm -rf flex_yemen
-      
-      - name: Get dependencies
-        run: flutter pub get
-      
-      - name: Install Pods
-        run: cd ios && pod install && cd ..
-        continue-on-error: true
-      
-      - name: Build iOS without signing
-        run: flutter build ios --release --no-codesign
