@@ -80,7 +80,7 @@ class ProProductsScreen extends StatelessWidget {
                       const SizedBox(height: 4),
                       Row(
                         children: [
-                          const Icon(Icons.star, color: AppColors.goldGradient, size: 16),
+                          const Icon(Icons.star, color: AppColors.goldColor, size: 16),
                           Text(
                             '${product['rating']}',
                             style: TextStyle(
@@ -100,14 +100,14 @@ class ProProductsScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+//               ),
+//               Text(
+//                 "(product['price'] as int ﷼".toDouble()),
+//                 style: const TextStyle(
+//                   color: AppColors.goldColor,
+//                   fontWeight: FontWeight.bold,
+//                   fontSize: 16,
 //                 ),
-//                 Text(
-// //                   "(product['price'] as int ﷼".toDouble()),
-// //                   style: const TextStyle(
-// //                     color: AppColors.goldColor,
-//                     fontWeight: FontWeight.bold,
-//                     fontSize: 16,
-//                   ),
                 ),
               ],
             ),

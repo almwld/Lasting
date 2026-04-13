@@ -164,7 +164,7 @@ extension TransactionStatusExtension on TransactionStatus {
       case TransactionStatus.completed:
         return AppColors.success;
       case TransactionStatus.failed:
-        return AppColors.error;
+        return AppColors.errorColor;
       case TransactionStatus.cancelled:
         return AppColors.textSecondary;
     }

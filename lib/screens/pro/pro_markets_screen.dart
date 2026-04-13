@@ -9,15 +9,15 @@ class ProMarketsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final markets = [
-//       {'name': 'الأسواق اليمنية', 'count': 1250, 'icon': Icons.store, 'color': AppColors.goldColor},
-//       {'name': 'المولات', 'count': 85, 'icon': Icons.local_mall, 'color': AppColors.primaryColor},
-//       {'name': 'المقاهي', 'count': 420, 'icon': Icons.local_cafe, 'color': AppColors.warning},
-//       {'name': 'الاستراحات', 'count': 156, 'icon': Icons.beach_access, 'color': AppColors.info},
-//       {'name': 'الفنادق', 'count': 95, 'icon': Icons.hotel, 'color': AppColors.secondaryColor},
-//       {'name': 'المطاعم', 'count': 680, 'icon': Icons.restaurant, 'color': AppColors.error},
-//       {'name': 'الإلكترونيات', 'count': 320, 'icon': Icons.devices, 'color': AppColors.primaryColor},
-//       {'name': 'السيارات', 'count': 180, 'icon': Icons.directions_car, 'color': AppColors.info},
-//       {'name': 'العقارات', 'count': 450, 'icon': Icons.apartment, 'color': AppColors.goldGradient.shade700},
+//     {'name': 'الأسواق اليمنية', 'count': 1250, 'icon': Icons.store, 'color': AppColors.goldColor},
+//     {'name': 'المولات', 'count': 85, 'icon': Icons.local_mall, 'color': AppColors.primaryColor},
+//     {'name': 'المقاهي', 'count': 420, 'icon': Icons.local_cafe, 'color': AppColors.warning},
+//     {'name': 'الاستراحات', 'count': 156, 'icon': Icons.beach_access, 'color': AppColors.info},
+//     {'name': 'الفنادق', 'count': 95, 'icon': Icons.hotel, 'color': AppColors.secondaryColor},
+//     {'name': 'المطاعم', 'count': 680, 'icon': Icons.restaurant, 'color': AppColors.errorColor},
+//     {'name': 'الإلكترونيات', 'count': 320, 'icon': Icons.devices, 'color': AppColors.primaryColor},
+//     {'name': 'السيارات', 'count': 180, 'icon': Icons.directions_car, 'color': AppColors.info},
+//     {'name': 'العقارات', 'count': 450, 'icon': Icons.apartment, 'color': AppColors.goldGradient.shade700},
       {'name': 'الأزياء', 'count': 550, 'icon': Icons.checkroom, 'color': AppColors.warning},
     ];
 

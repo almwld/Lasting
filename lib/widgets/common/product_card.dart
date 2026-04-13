@@ -116,7 +116,7 @@ class ProductCard extends StatelessWidget {
                       if (product.oldPrice != null) ...[
                         const SizedBox(width: 4),
                         Text(
-                          product.formattedOldPrice,
+                          product.formattedOldPrice ?? "",
                           style: TextStyle(
                             fontSize: 10,
                             color: AppColors.textSecondary,
@@ -189,7 +189,7 @@ class ProductCard extends StatelessWidget {
                         if (product.oldPrice != null) ...[
                           const SizedBox(width: 8),
                           Text(
-                            product.formattedOldPrice,
+                            product.formattedOldPrice ?? "",
                             style: TextStyle(
                               fontSize: 12,
                               color: AppColors.textSecondary,

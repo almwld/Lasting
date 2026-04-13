@@ -102,7 +102,7 @@ class AdminProducts extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: product['status'] == 'متاح'
                               ? AppColors.success.withOpacity(0.1)
-                              : AppColors.error.withOpacity(0.1),
+                              : AppColors.errorColor.withOpacity(0.1),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Text(
@@ -110,7 +110,7 @@ class AdminProducts extends StatelessWidget {
                           style: TextStyle(
                             color: product['status'] == 'متاح'
                                 ? AppColors.success
-                                : AppColors.error,
+                                : AppColors.errorColor,
                             fontSize: 12,
                           ),
                         ),

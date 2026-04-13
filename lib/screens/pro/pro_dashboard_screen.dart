@@ -46,10 +46,10 @@ class ProDashboardScreen extends StatelessWidget {
   }
 
   Widget _buildStatsSection(BuildContext context, ViewModeProvider viewMode) {
-//     final stats = [
-//       {'title': 'مستخدمين نشطين', 'value': '12,458', 'icon': Icons.people, 'color': AppColors.info},
-//       {'title': 'طلبات يومية', 'value': '2,156', 'icon': Icons.shopping_cart, 'color': AppColors.success},
-//       {'title': 'مبيعات', 'value': '45.2M', 'icon': Icons.attach_money, 'color': AppColors.goldColor},
+//   final stats = [
+//     {'title': 'مستخدمين نشطين', 'value': '12,458', 'icon': Icons.people, 'color': AppColors.info},
+//     {'title': 'طلبات يومية', 'value': '2,156', 'icon': Icons.shopping_cart, 'color': AppColors.success},
+//     {'title': 'مبيعات', 'value': '45.2M', 'icon': Icons.attach_money, 'color': AppColors.goldColor},
       {'title': 'بائعون جدد', 'value': '156', 'icon': Icons.store, 'color': AppColors.primaryColor},
     ];
 
@@ -60,8 +60,8 @@ class ProDashboardScreen extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-//               decoration: BoxDecoration(
-//                 gradient: AppColors.goldGradient,
+//             decoration: BoxDecoration(
+//               gradient: AppColors.goldGradient,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
@@ -118,8 +118,8 @@ class ProDashboardScreen extends StatelessWidget {
                         ),
                       ),
                       Icon(
-//                         Icons.trending_up,
-//                         color: AppColors.success,
+//                       Icons.trending_up,
+//                       color: AppColors.success,
                         size: 16,
                       ),
                     ],
@@ -276,8 +276,8 @@ class ProDashboardScreen extends StatelessWidget {
                       ),
                       Text(
                         market['growth'] as String,
-//                         style: TextStyle(
-//                           color: AppColors.success,
+//                       style: TextStyle(
+//                         color: AppColors.success,
                           fontSize: 12,
                         ),
                       ),

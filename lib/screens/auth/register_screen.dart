@@ -37,8 +37,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (!_acceptTerms) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("يرجى قبول الشروط والأحكام"),
-//           content: Text('يرجى قبول الشروط والأحكام'),
-//           backgroundColor: AppColors.warning,
+//         content: Text('يرجى قبول الشروط والأحكام'),
+//         backgroundColor: AppColors.warning,
         ),
       );
       return;
@@ -60,7 +60,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text("يرجى قبول الشروط والأحكام"),
             content: Text('فشل في إنشاء الحساب. يرجى المحاولة مرة أخرى.'),
-            backgroundColor: AppColors.error,
+            backgroundColor: AppColors.errorColor,
           ),
         );
       }

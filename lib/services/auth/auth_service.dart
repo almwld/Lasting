@@ -25,6 +25,7 @@ class AuthService {
       // For demo, simulate login
       final user = UserModel(
         id: 'user_1',
+        name: 'مستخدم',
         fullName: 'مستخدم فلكس',
         email: email,
         phone: '777123456',
@@ -58,6 +59,7 @@ class AuthService {
       // For demo, simulate registration
       final user = UserModel(
         id: 'user_${DateTime.now().millisecondsSinceEpoch}',
+        name: fullName,
         fullName: fullName,
         email: email,
         phone: phone,

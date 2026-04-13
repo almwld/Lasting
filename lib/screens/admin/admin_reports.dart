@@ -133,7 +133,7 @@ class AdminReports extends StatelessWidget {
             const SizedBox(height: 16),
             _buildReportCard('مستخدمين جدد', '234', Icons.person_add, AppColors.info),
             _buildReportCard('مشتركين نشطين', '1,234', Icons.people, AppColors.success),
-            _buildReportCard('مستخدمين غير نشطين', '567', Icons.person_off, AppColors.error),
+            _buildReportCard('مستخدمين غير نشطين', '567', Icons.person_off, AppColors.errorColor),
           ],
         ),
       ),

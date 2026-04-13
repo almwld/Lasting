@@ -89,7 +89,7 @@ class AdminUsers extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: user['status'] == 'نشط'
                               ? AppColors.success.withOpacity(0.1)
-                              : AppColors.error.withOpacity(0.1),
+                              : AppColors.errorColor.withOpacity(0.1),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Text(
@@ -97,7 +97,7 @@ class AdminUsers extends StatelessWidget {
                           style: TextStyle(
                             color: user['status'] == 'نشط'
                                 ? AppColors.success
-                                : AppColors.error,
+                                : AppColors.errorColor,
                             fontSize: 12,
                           ),
                         ),

@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('فشل في تسجيل الدخول. يرجى المحاولة مرة أخرى.'),
-            backgroundColor: AppColors.error,
+            backgroundColor: AppColors.errorColor,
           ),
         );
       }

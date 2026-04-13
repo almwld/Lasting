@@ -85,22 +85,22 @@ class AuthProvider extends ChangeNotifier {
   }
 
   Future<void> loginAsGuest() async {
-//     final guestData = UserModel(
-//       id: 'guest_${DateTime.now().millisecondsSinceEpoch}',
-//       fullName: 'ضيف',
-//       email: 'guest@flexyemen.com',
-//       phone: '',
-//       userType: 'guest',
-// //     );
-// //     await login(guestData, isGuest: true);
-// //   }
-// // 
-// //   Future<void> login(UserModel userData, {bool isGuest = false}) async {
-//     _isLoggedIn = true;
-//     _isGuest = isGuest;
-//     _userData = userData;
+//   final guestData = UserModel(
+//     id: 'guest_${DateTime.now().millisecondsSinceEpoch}',
+//     fullName: 'ضيف',
+//     email: 'guest@flexyemen.com',
+//     phone: '',
+//     userType: 'guest',
+//   );
+//   await login(guestData, isGuest: true);
+// }
 // 
-//     await LocalStorageService.saveUserData(userData.toJson());
+// Future<void> login(UserModel userData, {bool isGuest = false}) async {
+//   _isLoggedIn = true;
+//   _isGuest = isGuest;
+//   _userData = userData;
+// 
+//   await LocalStorageService.saveUserData(userData.toJson());
     await LocalStorageService.setBool('is_guest', isGuest);
 
     notifyListeners();

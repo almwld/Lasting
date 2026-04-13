@@ -56,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen>
             end: Alignment.bottomCenter,
             colors: [
               AppColors.goldColor,
-              AppColors.goldGradient.shade700,
+              AppColors.goldDark,
             ],
           ),
         ),

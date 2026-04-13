@@ -163,7 +163,7 @@ class AdminOrders extends StatelessWidget {
       case 'منتهي':
         return AppColors.success;
       case 'ملغي':
-        return AppColors.error;
+        return AppColors.errorColor;
       default:
         return AppColors.textSecondary;
     }

@@ -74,9 +74,9 @@ class HomeScreen extends StatelessWidget {
 
   Widget _buildAdCarousel() {
     final ads = [
-//       {'title': 'عرض خاص على الإلكترونيات', 'color': AppColors.goldColor},
-//       {'title': 'خصم 30% على المطاعم', 'color': AppColors.info},
-//       {'title': 'تشكيلات جديدة للأزياء', 'color': AppColors.secondaryColor},
+//     {'title': 'عرض خاص على الإلكترونيات', 'color': AppColors.goldColor},
+//     {'title': 'خصم 30% على المطاعم', 'color': AppColors.info},
+//     {'title': 'تشكيلات جديدة للأزياء', 'color': AppColors.secondaryColor},
     ];
 
     return CarouselSlider(
@@ -213,8 +213,8 @@ class HomeScreen extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-//           gradient: isSelected && isPro
-//               ? AppColors.goldGradient
+//         gradient: isSelected && isPro
+//             ? AppColors.goldGradient
               : isSelected
                   ? null
                   : null,
@@ -661,9 +661,9 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Container(
                       height: 100,
-//                       decoration: BoxDecoration(
-//                         color: AppColors.info.withOpacity(0.1),
-//                         borderRadius: const BorderRadius.vertical(
-//                           top: Radius.circular(12),
-//                         ),
+//                     decoration: BoxDecoration(
+//                       color: AppColors.info.withOpacity(0.1),
+//                       borderRadius: const BorderRadius.vertical(
+//                         top: Radius.circular(12),
 //                       ),
+//                     ),

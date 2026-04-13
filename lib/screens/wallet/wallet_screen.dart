@@ -72,8 +72,8 @@ class WalletScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(24),
-//       decoration: BoxDecoration(
-//         gradient: AppColors.goldGradient,
+//     decoration: BoxDecoration(
+//       gradient: AppColors.goldGradient,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
