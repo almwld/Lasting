@@ -11,7 +11,6 @@ import 'providers/wallet_provider.dart';
 import 'services/connection_checker.dart';
 import 'services/storage/local_storage_service.dart';
 import 'core/theme/app_theme.dart';
-import 'core/constants/app_colors.dart';
 
 // Screens
 import 'screens/splash_screen.dart';
@@ -34,62 +33,48 @@ import 'screens/notifications/notifications_screen.dart';
 import 'screens/search/search_screen.dart';
 import 'screens/settings/settings_screen.dart';
 import 'screens/categories/categories_screen.dart';
-import 'screens/error_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // معالجة الأخطاء العالمية
-  FlutterError.onError = (FlutterErrorDetails details) {
-    debugPrint("=== FLUTTER ERROR ===");
-    debugPrint("Exception: ${details.exception}");
-    debugPrint("Stack: ${details.stack}");
-    debugPrint("====================");
-  };
-  
+  // تحميل المتغيرات البيئية (لن يمنع ظهور التطبيق إذا فشل)
   try {
-    // Initialize storage
-    await LocalStorageService.init();
+    await dotenv.load(fileName: ".env");
   } catch (e) {
-    debugPrint("Storage init error: $e");
+    debugPrint("خطأ في تحميل .env: $e");
   }
   
-  // Load environment variables
-  try {
-    await dotenv.load(fileName: '.env');
-    debugPrint(".env loaded successfully");
-  } catch (e) {
-    debugPrint('Warning: .env file not found: $e');
-  }
+  // تهيئة التخزين المحلي أولاً (لظهور التطبيق حتى بدون إنترنت)
+  await LocalStorageService.init();
   
-  // Initialize Supabase
-  try {
-    final url = dotenv.env['SUPABASE_URL'];
-    final anonKey = dotenv.env['SUPABASE_ANON_KEY'];
-    if (url != null && anonKey != null && url.isNotEmpty && anonKey.isNotEmpty) {
-      await Supabase.initialize(url: url, anonKey: anonKey);
-      debugPrint("Supabase initialized successfully");
-    } else {
-      debugPrint("Supabase credentials missing");
-    }
-  } catch (e) {
-    debugPrint("Supabase initialization error: $e");
-  }
-
-  // System UI settings
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.light,
-    ),
-  );
-  
+  // إعدادات النظام
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-
+  
+  // تشغيل التطبيق فوراً (سيظهر حتى لو لم يتم تهيئة Supabase بعد)
   runApp(const FlexYemenApp());
+  
+  // تهيئة Supabase في الخلفية (لا تمنع ظهور التطبيق)
+  _initSupabaseInBackground();
+}
+
+// تهيئة Supabase في الخلفية بدون انتظار
+void _initSupabaseInBackground() async {
+  try {
+    final url = dotenv.env['SUPABASE_URL'];
+    final anonKey = dotenv.env['SUPABASE_ANON_KEY'];
+    
+    if (url != null && anonKey != null && url.isNotEmpty && anonKey.isNotEmpty) {
+      await Supabase.initialize(url: url, anonKey: anonKey);
+      debugPrint("✅ Supabase initialized successfully");
+    } else {
+      debugPrint("⚠️ Supabase credentials missing");
+    }
+  } catch (e) {
+    debugPrint("❌ Supabase initialization error: $e");
+  }
 }
 
 class FlexYemenApp extends StatelessWidget {
