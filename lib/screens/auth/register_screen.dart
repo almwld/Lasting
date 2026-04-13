@@ -37,8 +37,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (!_acceptTerms) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("يرجى قبول الشروط والأحكام"),
-//         content: Text('يرجى قبول الشروط والأحكام'),
-//         backgroundColor: AppColors.warning,
+
+
         ),
       );
       return;

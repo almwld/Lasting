@@ -74,7 +74,7 @@ class WalletScreen extends StatelessWidget {
       padding: const EdgeInsets.all(24),
 //     decoration: BoxDecoration(
 //       gradient: AppColors.goldGradient,
-        borderRadius: BorderRadius.circular(20),
+      //   borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
             color: AppColors.goldColor.withOpacity(0.4),
