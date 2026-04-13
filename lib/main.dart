@@ -37,14 +37,15 @@ import 'screens/categories/categories_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // تحميل المتغيرات البيئية (لن يمنع ظهور التطبيق إذا فشل)
+  // تحميل المتغيرات البيئية
   try {
     await dotenv.load(fileName: ".env");
+    debugPrint(".env loaded successfully");
   } catch (e) {
-    debugPrint("خطأ في تحميل .env: $e");
+    debugPrint("Warning: .env file not found: $e");
   }
   
-  // تهيئة التخزين المحلي أولاً (لظهور التطبيق حتى بدون إنترنت)
+  // تهيئة التخزين المحلي أولاً
   await LocalStorageService.init();
   
   // إعدادات النظام
@@ -53,14 +54,13 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   
-  // تشغيل التطبيق فوراً (سيظهر حتى لو لم يتم تهيئة Supabase بعد)
+  // تشغيل التطبيق فوراً
   runApp(const FlexYemenApp());
   
-  // تهيئة Supabase في الخلفية (لا تمنع ظهور التطبيق)
+  // تهيئة Supabase في الخلفية
   _initSupabaseInBackground();
 }
 
-// تهيئة Supabase في الخلفية بدون انتظار
 void _initSupabaseInBackground() async {
   try {
     final url = dotenv.env['SUPABASE_URL'];
@@ -69,6 +69,7 @@ void _initSupabaseInBackground() async {
     if (url != null && anonKey != null && url.isNotEmpty && anonKey.isNotEmpty) {
       await Supabase.initialize(url: url, anonKey: anonKey);
       debugPrint("✅ Supabase initialized successfully");
+      debugPrint("Supabase URL: $url");
     } else {
       debugPrint("⚠️ Supabase credentials missing");
     }
