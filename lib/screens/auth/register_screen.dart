@@ -36,9 +36,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Future<void> _register() async {
     if (!_acceptTerms) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("يرجى قبول الشروط والأحكام"),
-
-
+        const SnackBar(content: Text("يرجى قبول الشروط والأحكام")),
         ),
       );
       return;

@@ -71,10 +71,9 @@ class WalletScreen extends StatelessWidget {
   Widget _buildBalanceCard(BuildContext context, WalletProvider walletProvider) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(24),
-//     decoration: BoxDecoration(
-//       gradient: AppColors.goldGradient,
-      //   borderRadius: BorderRadius.circular(20),
+      decoration: BoxDecoration(
+        gradient: AppColors.goldGradient,
+        borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
             color: AppColors.goldColor.withOpacity(0.4),

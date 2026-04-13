@@ -457,12 +457,7 @@ class HomeScreen extends StatelessWidget {
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(16),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: 120,
-            decoration: BoxDecoration(
+            child: const Center(child: Icon(Icons.image, color: AppColors.goldColor, size: 50)),
               color: AppColors.goldColor.withOpacity(0.1),
               borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
             ),
