@@ -92,9 +92,9 @@ class OfflineBanner extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-        );
-      },
-    );
+//           ),
+//         );
+//       },
+//     );
   }
 }

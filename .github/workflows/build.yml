@@ -7,10 +7,16 @@ on:
     branches: [ main ]
 
 jobs:
-  build_check:
+  build_android:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
       
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -18,12 +24,21 @@ jobs:
           flutter-version: '3.19.6'
           channel: 'stable'
       
+      - name: Create fresh Android project
+        run: |
+          rm -rf android
+          flutter create --platforms=android --org com.flexyemen flex_yemen
+          mv flex_yemen/android .
+          rm -rf flex_yemen
+      
       - name: Get dependencies
         run: flutter pub get
       
-      - name: Check build (no fail)
-        run: flutter build apk --release || echo "Build failed but continuing..."
-        continue-on-error: true
+      - name: Build APK
+        run: flutter build apk --release
       
-      - name: Mark CI as passed
-        run: echo "✅ CI completed - check build results above"
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: lasting-android-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
