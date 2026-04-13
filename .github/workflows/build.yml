@@ -31,13 +31,6 @@ jobs:
           cp -r flex_yemen/android .
           rm -rf flex_yemen
       
-      - name: Fix Android settings
-        run: |
-          echo "android.defaultConfig.minSdkVersion 21" >> android/local.properties
-          sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 34/g' android/app/build.gradle
-          sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 21/g' android/app/build.gradle
-          sed -i 's/targetSdkVersion flutter.targetSdkVersion/targetSdkVersion 34/g' android/app/build.gradle
-      
       - name: Get dependencies
         run: flutter pub get
       
