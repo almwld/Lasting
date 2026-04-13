@@ -11,7 +11,7 @@ class ProDashboardScreen extends StatelessWidget {
       {"title": "إجمالي المبيعات", "value": "12,450", "icon": Icons.trending_up, "color": AppColors.primaryColor},
       {"title": "الطلبات", "value": "156", "icon": Icons.shopping_bag, "color": AppColors.secondaryColor},
       {"title": "العملاء", "value": "89", "icon": Icons.people, "color": AppColors.accentColor},
-      {"title": "بائعون جدد", "value": "156", "icon": Icons.store, "color": AppColors.primaryColor},
+      {"title": "بائعون جدد", "value": "156", "icon": Icons.store, "color": AppColors.goldColor},
     ];
 
     return Scaffold(

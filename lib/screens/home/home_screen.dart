@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                 _buildCategoryCard(Icons.devices, 'إلكترونيات', AppColors.primaryColor),
                 _buildCategoryCard(Icons.checkroom, 'أزياء', AppColors.secondaryColor),
                 _buildCategoryCard(Icons.home, 'عقارات', AppColors.accentColor),
-                _buildCategoryCard(Icons.directions_car, 'سيارات', AppColors.primaryColor),
+                _buildCategoryCard(Icons.directions_car, 'سيارات', AppColors.goldColor),
               ],
             ),
             const SizedBox(height: 24),
