@@ -39,7 +39,7 @@ void main() async {
 
   // Initialize storage
   await LocalStorageService.init();
-
+  
   // Load environment variables
   try {
     await dotenv.load(fileName: '.env');
@@ -120,7 +120,7 @@ class FlexYemenApp extends StatelessWidget {
               '/transactions': (context) => const TransactionsScreen(),
               '/bills': (context) => const BillPaymentScreen(),
               '/recharge': (context) => const RechargeScreen(),
-              '/pro': (context) => const ProDashboardScreen(),
+              '/pro': (context) => const ProDashboardScreen(viewMode: 'pro'),
               '/pro/markets': (context) => const ProMarketsScreen(),
               '/pro/products': (context) => const ProProductsScreen(),
               '/profile': (context) => const ProfileScreen(),
