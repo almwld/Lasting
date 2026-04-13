@@ -49,3 +49,11 @@ class AppColors {
     stops: [0.0, 0.5, 1.0],
   );
 }
+
+class AppColors {
+  static const Color scaffoldBg = Color(0xFFF5F5F5);
+  static const Color cardColor = Colors.white;
+  static const Color borderColor = Color(0xFFE0E0E0);
+  static const Color goldColor = Color(0xFFFFD700);
+  static const Color textSecondary = Color(0xFF757575);
+}
