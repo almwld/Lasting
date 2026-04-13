@@ -27,34 +27,41 @@ jobs:
       
       - name: Build APK
         run: |
-          # إنشاء مجلد مؤقت للمشروع
           cd /tmp
           rm -rf lasting_build
           mkdir lasting_build
           cd lasting_build
           
-          # إنشاء مشروع Flutter جديد (سينشئ android تلقائياً)
           flutter create --org com.lasting --project-name lasting --platforms android .
           
-          # نسخ الكود من المستودع إلى المشروع الجديد
           cp -r $GITHUB_WORKSPACE/lib .
           cp -r $GITHUB_WORKSPACE/assets . 2>/dev/null || true
           cp $GITHUB_WORKSPACE/pubspec.yaml .
           
-          # إنشاء مجلدات assets
           mkdir -p assets/images assets/icons/png assets/icons/svg assets/lottie assets/fonts
           touch .env
           
-          # نسخ ملفات الخطوط إذا وجدت
           if [ -d "$GITHUB_WORKSPACE/assets/fonts" ]; then
             cp -r $GITHUB_WORKSPACE/assets/fonts/* assets/fonts/ 2>/dev/null || true
           fi
           
-          # تثبيت التبعيات
+          # تحديث Kotlin version إلى 2.0.21
+          sed -i 's/ext.kotlin_version = .*/ext.kotlin_version = "2.0.21"/' android/build.gradle
+          sed -i 's/id "org.jetbrains.kotlin.android" version ".*"/id "org.jetbrains.kotlin.android" version "2.0.21" apply false/' android/settings.gradle
+          
+          # تحديث minSdkVersion
+          sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 21/' android/app/build.gradle
+          
+          # إضافة coreLibraryDesugaring
+          sed -i '/android {/a\    compileOptions {\n        coreLibraryDesugaringEnabled true\n    }' android/app/build.gradle
+          sed -i '/dependencies {/a\    coreLibraryDesugaring '\''com.android.tools:desugar_jdk_libs:2.0.4'\''' android/app/build.gradle
+          sed -i '/dependencies {/a\    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.21"' android/app/build.gradle
+          
+          # إضافة الأذونات
+          sed -i '/<\/manifest>/i\    <uses-permission android:name="android.permission.INTERNET" />\n    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />\n    <uses-permission android:name="android.permission.CAMERA" />\n    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />\n    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />\n    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />' android/app/src/main/AndroidManifest.xml
+          
           flutter clean
           flutter pub get
-          
-          # بناء APK (Flutter سيتعامل مع android تلقائياً)
           flutter build apk --release --split-per-abi
           
           echo "=== APK Built Successfully ==="
