@@ -11,8 +11,8 @@ class SellerDashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).brightness == Brightness.dark
-          ? AppColors.backgroundDark
-          : AppColors.backgroundGrey,
+          ? Colors.black87
+          : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'لوحة البائع',
         showBackButton: false,
@@ -26,7 +26,7 @@ class SellerDashboard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                gradient: AppColors.goldGradient,
+                gradient: Colors.amber,
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Row(

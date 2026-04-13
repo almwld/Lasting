@@ -22,7 +22,7 @@ class MarketDetailsScreen extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 decoration: BoxDecoration(
-                  gradient: AppColors.goldGradient,
+                  gradient: Colors.amber,
                 ),
                 child: Center(
                   child: Icon(

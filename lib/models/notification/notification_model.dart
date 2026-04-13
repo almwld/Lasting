@@ -10,6 +10,7 @@ class NotificationModel {
   bool isRead;
   
   NotificationModel({
+    String? userId,
     required this.id,
     required this.title,
     required this.body,

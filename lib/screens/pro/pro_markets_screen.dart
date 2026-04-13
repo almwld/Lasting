@@ -16,14 +16,14 @@ class ProMarketsScreen extends StatelessWidget {
       {'name': 'المطاعم', 'count': 680, 'icon': Icons.restaurant, 'color': AppColors.error},
       {'name': 'الإلكترونيات', 'count': 320, 'icon': Icons.devices, 'color': AppColors.primaryColor},
       {'name': 'السيارات', 'count': 180, 'icon': Icons.directions_car, 'color': AppColors.info},
-      {'name': 'العقارات', 'count': 450, 'icon': Icons.apartment, 'color': AppColors.goldDark},
+      {'name': 'العقارات', 'count': 450, 'icon': Icons.apartment, 'color': Colors.amber.shade700},
       {'name': 'الأزياء', 'count': 550, 'icon': Icons.checkroom, 'color': AppColors.warning},
     ];
 
     return Scaffold(
       backgroundColor: Theme.of(context).brightness == Brightness.dark
-          ? AppColors.backgroundDark
-          : AppColors.backgroundGrey,
+          ? Colors.black87
+          : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'إدارة الأسواق',
         showBackButton: true,

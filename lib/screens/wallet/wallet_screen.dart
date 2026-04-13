@@ -20,7 +20,7 @@ class WalletScreen extends StatelessWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'المحفظة',
         showBackButton: false,
@@ -72,7 +72,7 @@ class WalletScreen extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
-        gradient: AppColors.goldGradient,
+        gradient: Colors.amber,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
@@ -212,7 +212,7 @@ class WalletScreen extends StatelessWidget {
             context,
             'شحن رصيد',
             Icons.phone_android,
-            AppColors.info,
+            Colors.blue,
             () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const RechargeScreen()),
@@ -225,7 +225,7 @@ class WalletScreen extends StatelessWidget {
             context,
             'دفع فواتير',
             Icons.receipt_long,
-            AppColors.secondaryColor,
+            Colors.teal,
             () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const BillPaymentScreen()),
@@ -238,7 +238,7 @@ class WalletScreen extends StatelessWidget {
             context,
             'الطلبات',
             Icons.shopping_bag,
-            AppColors.warning,
+            Colors.orange,
             () {},
           ),
         ),
@@ -289,11 +289,11 @@ class WalletScreen extends StatelessWidget {
   Widget _buildServicesGrid(BuildContext context) {
     final services = [
       {'name': 'فلكس باي', 'icon': Icons.payment, 'color': AppColors.goldColor},
-      {'name': 'كاش', 'icon': Icons.money, 'color': AppColors.success},
-      {'name': 'يمن موبايل', 'icon': Icons.phone_android, 'color': AppColors.primaryColor},
-      {'name': 'سبأفون', 'icon': Icons.phone, 'color': AppColors.warning},
-      {'name': 'YOU', 'icon': Icons.smartphone, 'color': AppColors.info},
-      {'name': 'واصل', 'icon': Icons.local_shipping, 'color': AppColors.secondaryColor},
+      {'name': 'كاش', 'icon': Icons.money, 'color': Colors.green},
+      {'name': 'يمن موبايل', 'icon': Icons.phone_android, 'color': Colors.blue},
+      {'name': 'سبأفون', 'icon': Icons.phone, 'color': Colors.orange},
+      {'name': 'YOU', 'icon': Icons.smartphone, 'color': Colors.blue},
+      {'name': 'واصل', 'icon': Icons.local_shipping, 'color': Colors.teal},
     ];
 
     return Column(
@@ -424,13 +424,13 @@ class WalletScreen extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: (isIncoming ? AppColors.success : AppColors.error)
+                        color: (isIncoming ? Colors.green : Colors.red)
                             .withOpacity(0.1),
                         shape: BoxShape.circle,
                       ),
                       child: Icon(
                         isIncoming ? Icons.arrow_downward : Icons.arrow_upward,
-                        color: isIncoming ? AppColors.success : AppColors.error,
+                        color: isIncoming ? Colors.green : Colors.red,
                         size: 20,
                       ),
                     ),
@@ -458,7 +458,7 @@ class WalletScreen extends StatelessWidget {
                     Text(
                       '${isIncoming ? '+' : '-'}${"transaction.amount ﷼"}',
                       style: TextStyle(
-                        color: isIncoming ? AppColors.success : AppColors.error,
+                        color: isIncoming ? Colors.green : Colors.red,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

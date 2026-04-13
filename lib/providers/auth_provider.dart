@@ -4,6 +4,8 @@ import '../../services/auth/auth_service.dart';
 import '../../services/storage/local_storage_service.dart';
 
 class AuthProvider extends ChangeNotifier {
+  String get viewMode => "expert";
+  UserModel? get user => _userData;
   final AuthService _authService = AuthService();
 
   bool _isLoggedIn = false;

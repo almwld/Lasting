@@ -71,7 +71,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -172,7 +172,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           text: TextSpan(
                             style: TextStyle(
                               fontFamily: 'Changa',
-                              color: AppColors.textPrimary,
+                              color: Colors.black87,
                             ),
                             children: [
                               const TextSpan(text: 'أوافق على '),

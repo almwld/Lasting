@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24),
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      gradient: AppColors.goldGradient,
+                      gradient: Colors.amber,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: const Icon(
@@ -233,7 +233,7 @@ class _SocialButton extends StatelessWidget {
             ? const Color(0xFF2C2C2C)
             : Colors.white,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.backgroundGrey),
+        border: Border.all(color: Colors.grey.shade100),
       ),
       child: IconButton(
         icon: Icon(icon, size: 28),

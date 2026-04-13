@@ -56,7 +56,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.cardColor,
-        foregroundColor: AppColors.textPrimary,
+        foregroundColor: Colors.black87,
         actions: [
           IconButton(
             icon: const Icon(Icons.filter_list),

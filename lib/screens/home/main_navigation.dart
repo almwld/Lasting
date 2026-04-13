@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../core/constants/app_colors.dart';
@@ -17,13 +18,13 @@ class MainNavigation extends StatefulWidget {
 
 class _MainNavigationState extends State<MainNavigation> {
   int _currentIndex = 0;
-
-  final List<Widget> _screens = [
-//     const HomeScreen(),
-//     const WalletScreen(),
-//     const ProfileScreen(),
-//   ];
-
+// 
+//   final List<Widget> _screens = [
+// //     const HomeScreen(),
+// //     const WalletScreen(),
+// //     const ProfileScreen(),
+// //   ];
+// 
   @override
   Widget build(BuildContext context) {
     return Scaffold(

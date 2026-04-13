@@ -24,8 +24,8 @@ class _AIChatAssistantState extends State<AIChatAssistant> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).brightness == Brightness.dark
-          ? AppColors.backgroundDark
-          : AppColors.backgroundGrey,
+          ? Colors.black87
+          : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'المساعد الذكي',
         showBackButton: true,

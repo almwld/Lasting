@@ -67,7 +67,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.cardColor,
-        foregroundColor: AppColors.textPrimary,
+        foregroundColor: Colors.black87,
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())

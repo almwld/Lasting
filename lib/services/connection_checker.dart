@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'dart:async';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
@@ -68,30 +69,30 @@ class ConnectionChecker extends ChangeNotifier {
 class OfflineBanner extends StatelessWidget {
   const OfflineBanner({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-//     return Consumer<ConnectionChecker>(
-//       builder: (context, checker, child) {
-//         if (checker.isOnline) {
-//           return const SizedBox.shrink();
-//         }
-//         return Container(
-//           width: double.infinity,
-//           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-          color: Colors.red.shade700,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.wifi_off, color: Colors.white, size: 16),
-              const SizedBox(width: 8),
-              Text(
-                'لا يوجد اتصال بالإنترنت',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
+//   @override
+//   Widget build(BuildContext context) {
+// //     return Consumer<ConnectionChecker>(
+// //       builder: (context, checker, child) {
+// //         if (checker.isOnline) {
+// //           return const SizedBox.shrink();
+// //         }
+// //         return Container(
+// //           width: double.infinity,
+// //           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+//           color: Colors.red.shade700,
+//           child: Row(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               const Icon(Icons.wifi_off, color: Colors.white, size: 16),
+//               const SizedBox(width: 8),
+//               Text(
+//                 'لا يوجد اتصال بالإنترنت',
+//                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
+//                   color: Colors.white,
+//                   fontWeight: FontWeight.w500,
+//                 ),
+//               ),
+//             ],
 //           ),
 //         );
 //       },

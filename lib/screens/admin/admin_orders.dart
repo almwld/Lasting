@@ -19,8 +19,8 @@ class AdminOrders extends StatelessWidget {
       length: 5,
       child: Scaffold(
         backgroundColor: Theme.of(context).brightness == Brightness.dark
-            ? AppColors.backgroundDark
-            : AppColors.backgroundGrey,
+            ? Colors.black87
+            : Colors.grey.shade100,
         appBar: CustomAppBar(
           title: 'إدارة الطلبات',
           showBackButton: true,

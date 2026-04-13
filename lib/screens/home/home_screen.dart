@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
     final viewMode = Provider.of<ViewModeProvider>(context);
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: CustomAppBar(
         showLogo: true,
         showBackButton: false,
@@ -213,7 +213,7 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
           gradient: isSelected && isPro
-              ? AppColors.goldGradient
+              ? Colors.amber
               : isSelected
                   ? null
                   : null,
@@ -487,12 +487,12 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   "price.toDouble( ﷼"),
-                  style: const TextStyle(
-                    color: AppColors.goldColor,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
+//                   style: const TextStyle(
+//                     color: AppColors.goldColor,
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ],
             ),
           ),
         ],

@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       backgroundColor: backgroundColor ??
-          (isDark ? AppColors.backgroundDark : AppColors.background),
+          (isDark ? Colors.black87 : AppColors.background),
       elevation: 0,
       centerTitle: true,
       automaticallyImplyLeading: false,
@@ -48,7 +48,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    gradient: AppColors.goldGradient,
+                    gradient: Colors.amber,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Icon(

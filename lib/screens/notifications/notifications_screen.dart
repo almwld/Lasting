@@ -28,7 +28,7 @@ class _NotificationsScreenState extends State<NotificationsScreen>
   void _loadNotifications() {
     final now = DateTime.now();
     _allNotifications = [
-      NotificationModel(
+      NotificationModel(userId: "default", 
         id: '1',
         title: 'طلب جديد',
         body: 'تم تأكيد طلبك رقم #1234',
@@ -36,7 +36,7 @@ class _NotificationsScreenState extends State<NotificationsScreen>
         isRead: false,
         createdAt: now.subtract(const Duration(minutes: 5)),
       ),
-      NotificationModel(
+      NotificationModel(userId: "default", 
         id: '2',
         title: 'تم الدفع',
         body: 'تم شحن محفظتك بمبلغ 50000 ريال',
@@ -44,7 +44,7 @@ class _NotificationsScreenState extends State<NotificationsScreen>
         isRead: false,
         createdAt: now.subtract(const Duration(hours: 1)),
       ),
-      NotificationModel(
+      NotificationModel(userId: "default", 
         id: '3',
         title: 'عرض خاص',
         body: 'خصم 20% على جميع المطاعم اليوم!',
@@ -52,7 +52,7 @@ class _NotificationsScreenState extends State<NotificationsScreen>
         isRead: true,
         createdAt: now.subtract(const Duration(days: 1)),
       ),
-      NotificationModel(
+      NotificationModel(userId: "default", 
         id: '4',
         title: 'تحديث التطبيق',
         body: 'يتوفر تحديث جديد للتطبيق',
@@ -74,7 +74,7 @@ class _NotificationsScreenState extends State<NotificationsScreen>
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.cardColor,
-        foregroundColor: AppColors.textPrimary,
+        foregroundColor: Colors.black87,
         actions: [
           TextButton(
             onPressed: () {

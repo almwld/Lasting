@@ -14,8 +14,8 @@ class _RechargeScreenState extends State<RechargeScreen> {
 
   final _operators = [
     {'name': 'سبأفون', 'icon': Icons.phone_android, 'color': AppColors.goldColor},
-    {'name': 'يمن موبايل', 'icon': Icons.smartphone, 'color': AppColors.primaryColor},
-    {'name': 'YOU', 'icon': Icons.phonelink, 'color': AppColors.info},
+    {'name': 'يمن موبايل', 'icon': Icons.smartphone, 'color': Colors.blue},
+    {'name': 'YOU', 'icon': Icons.phonelink, 'color': Colors.blue},
   ];
 
   final _packages = [
@@ -31,8 +31,8 @@ class _RechargeScreenState extends State<RechargeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).brightness == Brightness.dark
-          ? AppColors.backgroundDark
-          : AppColors.backgroundGrey,
+          ? Colors.black87
+          : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'شحن رصيد',
         showBackButton: true,
@@ -88,7 +88,7 @@ class _RechargeScreenState extends State<RechargeScreen> {
                               op['name'] as String,
                               style: TextStyle(
                                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                                color: isSelected ? op['color'] as Color : AppColors.textPrimary,
+                                color: isSelected ? op['color'] as Color : Colors.black87,
                               ),
                             ),
                           ],

@@ -34,7 +34,7 @@ class _TransactionsScreenState extends State<TransactionsScreen>
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'المعاملات',
         showBackButton: true,
@@ -152,23 +152,23 @@ class _TransactionsScreenState extends State<TransactionsScreen>
         switch (transaction.type) {
           case 'deposit':
             icon = Icons.add;
-            iconColor = AppColors.success;
+            iconColor = Colors.green;
             break;
           case 'withdraw':
             icon = Icons.remove;
-            iconColor = AppColors.error;
+            iconColor = Colors.red;
             break;
           case 'transfer':
             icon = Icons.send;
-            iconColor = AppColors.info;
+            iconColor = Colors.blue;
             break;
           case 'receive':
             icon = Icons.arrow_downward;
-            iconColor = AppColors.success;
+            iconColor = Colors.green;
             break;
           case 'payment':
             icon = Icons.payment;
-            iconColor = AppColors.warning;
+            iconColor = Colors.orange;
             break;
           default:
             icon = Icons.swap_horiz;
@@ -221,7 +221,7 @@ class _TransactionsScreenState extends State<TransactionsScreen>
                   Text(
                     '${isIncoming ? '+' : '-'}${"transaction.amount ﷼"}',
                     style: TextStyle(
-                      color: isIncoming ? AppColors.success : AppColors.error,
+                      color: isIncoming ? Colors.green : Colors.red,
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                     ),
@@ -274,11 +274,11 @@ class _TransactionsScreenState extends State<TransactionsScreen>
   Color _getStatusColor(String status) {
     switch (status) {
       case 'completed':
-        return AppColors.success;
+        return Colors.green;
       case 'pending':
-        return AppColors.warning;
+        return Colors.orange;
       case 'failed':
-        return AppColors.error;
+        return Colors.red;
       default:
         return AppColors.textSecondary;
     }

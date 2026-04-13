@@ -18,7 +18,7 @@ class OrderDetailsScreen extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.cardColor,
-        foregroundColor: AppColors.textPrimary,
+        foregroundColor: Colors.black87,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -28,7 +28,7 @@ class OrderDetailsScreen extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                gradient: AppColors.goldGradient,
+                gradient: Colors.amber,
               ),
               child: Column(
                 children: [

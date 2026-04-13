@@ -50,7 +50,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('تم السحب بنجاح'),
-            backgroundColor: AppColors.success,
+            backgroundColor: Colors.green,
           ),
         );
         Navigator.pop(context);
@@ -58,7 +58,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(walletProvider.error ?? 'فشل السحب'),
-            backgroundColor: AppColors.error,
+            backgroundColor: Colors.red,
           ),
         );
       }
@@ -70,7 +70,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: AppBar(
         title: const Text('سحب'),
         centerTitle: true,
@@ -88,7 +88,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
                   return Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      gradient: AppColors.goldGradient,
+                      gradient: Colors.amber,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Column(

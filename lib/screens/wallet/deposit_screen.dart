@@ -45,7 +45,7 @@ class _DepositScreenState extends State<DepositScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('تم الإيداع بنجاح'),
-            backgroundColor: AppColors.success,
+            backgroundColor: Colors.green,
           ),
         );
         Navigator.pop(context);
@@ -53,7 +53,7 @@ class _DepositScreenState extends State<DepositScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(walletProvider.error ?? 'فشل الإيداع'),
-            backgroundColor: AppColors.error,
+            backgroundColor: Colors.red,
           ),
         );
       }
@@ -65,7 +65,7 @@ class _DepositScreenState extends State<DepositScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: AppBar(
         title: const Text('إيداع'),
         centerTitle: true,
@@ -139,7 +139,7 @@ class _DepositScreenState extends State<DepositScreen> {
                                       : FontWeight.normal,
                                   color: isSelected
                                       ? AppColors.goldColor
-                                      : AppColors.textPrimary,
+                                      : Colors.black87,
                                 ),
                               ),
                               const Spacer(),

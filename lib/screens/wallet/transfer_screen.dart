@@ -54,7 +54,7 @@ class _TransferScreenState extends State<TransferScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('تم التحويل بنجاح'),
-            backgroundColor: AppColors.success,
+            backgroundColor: Colors.green,
           ),
         );
         Navigator.pop(context);
@@ -62,7 +62,7 @@ class _TransferScreenState extends State<TransferScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(walletProvider.error ?? 'فشل التحويل'),
-            backgroundColor: AppColors.error,
+            backgroundColor: Colors.red,
           ),
         );
       }
@@ -74,7 +74,7 @@ class _TransferScreenState extends State<TransferScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: AppBar(
         title: const Text('تحويل'),
         centerTitle: true,

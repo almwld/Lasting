@@ -51,7 +51,7 @@ class _AdCarouselState extends State<AdCarousel> {
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 16),
                   decoration: BoxDecoration(
-                    gradient: AppColors.goldGradient,
+                    gradient: Colors.amber,
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Stack(
@@ -90,7 +90,7 @@ class _AdCarouselState extends State<AdCarousel> {
                               child: Text(
                                 ad['button'] ?? 'اكتشف المزيد',
                                 style: TextStyle(
-                                  color: AppColors.goldDark,
+                                  color: Colors.amber.shade700,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -149,7 +149,7 @@ class _AdCarouselState extends State<AdCarousel> {
       height: 180,
       margin: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        gradient: AppColors.goldGradient,
+        gradient: Colors.amber,
         borderRadius: BorderRadius.circular(16),
       ),
     );

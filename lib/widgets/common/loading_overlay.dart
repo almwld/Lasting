@@ -39,7 +39,7 @@ class LoadingOverlay extends StatelessWidget {
                       Text(
                         message!,
                         style: const TextStyle(
-                          color: AppColors.textPrimary,
+                          color: Colors.black87,
                           fontSize: 14,
                         ),
                       ),

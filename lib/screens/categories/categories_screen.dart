@@ -23,18 +23,18 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   void _loadCategories() {
     setState(() {
       _categories = [
-        ProductCategory(id: '1', name: 'المطاعم', icon: Icons.restaurant, marketCount: 25),
-        ProductCategory(id: '2', name: 'الكافيهات', icon: Icons.local_cafe, marketCount: 18),
-        ProductCategory(id: '3', name: 'السوبرماركت', icon: Icons.shopping_cart, marketCount: 32),
-        ProductCategory(id: '4', name: 'الصيدليات', icon: Icons.local_pharmacy, marketCount: 15),
-        ProductCategory(id: '5', name: 'المولات', icon: Icons.shopping_bag, marketCount: 8),
-        ProductCategory(id: '6', name: 'الإلكترونيات', icon: Icons.devices, marketCount: 12),
-        ProductCategory(id: '7', name: 'الملابس', icon: Icons.checkroom, marketCount: 45),
-        ProductCategory(id: '8', name: 'المكياج', icon: Icons.face, marketCount: 20),
-        ProductCategory(id: '9', name: 'الرياضة', icon: Icons.sports_soccer, marketCount: 10),
-        ProductCategory(id: '10', name: 'الكتب', icon: Icons.menu_book, marketCount: 6),
-        ProductCategory(id: '11', name: 'الألعاب', icon: Icons.toys, marketCount: 14),
-        ProductCategory(id: '12', name: 'ال家具', icon: Icons.chair, marketCount: 9),
+        ProductCategory(id: '1', name: 'المطاعم', icon: Icons.restaurant),
+        ProductCategory(id: '2', name: 'الكافيهات', icon: Icons.local_cafe),
+        ProductCategory(id: '3', name: 'السوبرماركت', icon: Icons.shopping_cart),
+        ProductCategory(id: '4', name: 'الصيدليات', icon: Icons.local_pharmacy),
+        ProductCategory(id: '5', name: 'المولات', icon: Icons.shopping_bag),
+        ProductCategory(id: '6', name: 'الإلكترونيات', icon: Icons.devices),
+        ProductCategory(id: '7', name: 'الملابس', icon: Icons.checkroom),
+        ProductCategory(id: '8', name: 'المكياج', icon: Icons.face),
+        ProductCategory(id: '9', name: 'الرياضة', icon: Icons.sports_soccer),
+        ProductCategory(id: '10', name: 'الكتب', icon: Icons.menu_book),
+        ProductCategory(id: '11', name: 'الألعاب', icon: Icons.toys),
+        ProductCategory(id: '12', name: 'ال家具', icon: Icons.chair),
       ];
       _isLoading = false;
     });
@@ -49,7 +49,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.cardColor,
-        foregroundColor: AppColors.textPrimary,
+        foregroundColor: Colors.black87,
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
@@ -89,7 +89,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                gradient: AppColors.goldGradient,
+                gradient: Colors.amber,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(

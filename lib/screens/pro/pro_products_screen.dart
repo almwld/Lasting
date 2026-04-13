@@ -20,8 +20,8 @@ class ProProductsScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Theme.of(context).brightness == Brightness.dark
-          ? AppColors.backgroundDark
-          : AppColors.backgroundGrey,
+          ? Colors.black87
+          : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'المنتجات',
         showBackButton: true,
@@ -101,9 +101,9 @@ class ProProductsScreen extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "(product['price'] as int ﷼".toDouble()),
-                  style: const TextStyle(
-                    color: AppColors.goldColor,
+//                   "(product['price'] as int ﷼".toDouble()),
+//                   style: const TextStyle(
+//                     color: AppColors.goldColor,
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),

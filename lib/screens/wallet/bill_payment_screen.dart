@@ -8,18 +8,18 @@ class BillPaymentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bills = [
-      {'name': 'الكهرباء', 'icon': Icons.bolt, 'color': AppColors.warning},
-      {'name': 'المياه', 'icon': Icons.water_drop, 'color': AppColors.info},
-      {'name': 'الإنترنت', 'icon': Icons.wifi, 'color': AppColors.primaryColor},
-      {'name': 'الهاتف', 'icon': Icons.phone, 'color': AppColors.secondaryColor},
-      {'name': 'الغاز', 'icon': Icons.local_fire_department, 'color': AppColors.error},
+      {'name': 'الكهرباء', 'icon': Icons.bolt, 'color': Colors.orange},
+      {'name': 'المياه', 'icon': Icons.water_drop, 'color': Colors.blue},
+      {'name': 'الإنترنت', 'icon': Icons.wifi, 'color': Colors.blue},
+      {'name': 'الهاتف', 'icon': Icons.phone, 'color': Colors.teal},
+      {'name': 'الغاز', 'icon': Icons.local_fire_department, 'color': Colors.red},
       {'name': 'البلدية', 'icon': Icons.location_city, 'color': AppColors.goldColor},
     ];
 
     return Scaffold(
       backgroundColor: Theme.of(context).brightness == Brightness.dark
-          ? AppColors.backgroundDark
-          : AppColors.backgroundGrey,
+          ? Colors.black87
+          : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'دفع الفواتير',
         showBackButton: true,

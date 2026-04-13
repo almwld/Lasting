@@ -21,7 +21,7 @@ class CategoryChip extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          gradient: isSelected ? AppColors.goldGradient : null,
+          gradient: isSelected ? Colors.amber : null,
           color: isSelected ? null : AppColors.cardColor,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
@@ -40,7 +40,7 @@ class CategoryChip extends StatelessWidget {
             Text(
               category.name,
               style: TextStyle(
-                color: isSelected ? Colors.white : AppColors.textPrimary,
+                color: isSelected ? Colors.white : Colors.black87,
                 fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
                 fontSize: 13,
               ),

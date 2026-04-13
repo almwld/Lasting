@@ -16,7 +16,7 @@ extension AppColorsExtension on AppColors {
 
   static Color getBackgroundColor(BuildContext context) {
     return Theme.of(context).brightness == Brightness.dark
-        ? AppColors.backgroundDark
+        ? Colors.black87
         : AppColors.background;
   }
 }

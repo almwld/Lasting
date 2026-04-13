@@ -4,7 +4,7 @@ class AppCurrencyUtils {
   static final NumberFormat _yerFormat = NumberFormat('#,##0', 'ar_YE');
   static final NumberFormat _usdFormat = NumberFormat('#,##0.00', 'en_US');
 
-  static String formatYemeniRial(double amount) {
+  static String formattedPrice(double amount) {
     return '${_yerFormat.format(amount)} ر.ي';
   }
 
@@ -20,7 +20,7 @@ class AppCurrencyUtils {
       case 'yer':
       case 'ر.ي':
       default:
-        return formatYemeniRial(amount);
+        return formattedPrice(amount);
     }
   }
 

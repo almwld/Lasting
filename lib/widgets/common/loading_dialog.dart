@@ -28,7 +28,7 @@ class LoadingDialog extends StatelessWidget {
               Text(
                 message!,
                 style: const TextStyle(
-                  color: AppColors.textPrimary,
+                  color: Colors.black87,
                 ),
               ),
             ],

@@ -28,7 +28,7 @@ class _SearchScreenState extends State<SearchScreen> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.cardColor,
-        foregroundColor: AppColors.textPrimary,
+        foregroundColor: Colors.black87,
       ),
       body: Column(
         children: [
@@ -98,7 +98,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       children: [
                         Icon(Icons.history, size: 16, color: AppColors.textSecondary),
                         const SizedBox(width: 6),
-                        Text(search, style: TextStyle(color: AppColors.textPrimary)),
+                        Text(search, style: TextStyle(color: Colors.black87)),
                       ],
                     ),
                   ),
@@ -125,7 +125,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     vertical: 8,
                   ),
                   decoration: BoxDecoration(
-                    gradient: AppColors.goldGradient,
+                    gradient: Colors.amber,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
@@ -226,18 +226,18 @@ class _SearchScreenState extends State<SearchScreen> {
         name: 'برجر دجاج كبير',
         price: 2500,
         marketName: 'مطعم الأصالة',
-        marketId: '1',
-        categoryId: '1',
-      ),
-      ProductModel(
-        id: '2',
-        name: 'برجر لحم مع جبن',
-        price: 3500,
-        marketName: 'برجر كنغ',
-        marketId: '2',
-        categoryId: '1',
-      ),
-    ];
+//         marketId: '1',
+//         categoryId: '1',
+//       ),
+//       ProductModel(
+//         id: '2',
+//         name: 'برجر لحم مع جبن',
+//         price: 3500,
+//         marketName: 'برجر كنغ',
+//         marketId: '2',
+//         categoryId: '1',
+//       ),
+//     ];
 
     setState(() {
       _searchResults = results;

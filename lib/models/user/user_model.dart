@@ -2,12 +2,20 @@ class UserModel {
   final String id;
   final String name;
   final String email;
+  final String? fullName;
+  final String? avatarUrl;
+  final String? userType;
+  final String? city;
   final String? phone;
   final int ordersCount;
   final int favoritesCount;
   final double rating;
   
   UserModel({
+    this.fullName,
+    this.avatarUrl,
+    this.userType,
+    this.city,
     required this.id,
     required this.name,
     required this.email,

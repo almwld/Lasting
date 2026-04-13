@@ -12,7 +12,7 @@ class ProDashboardScreen extends StatelessWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDark ? AppColors.backgroundDark : AppColors.backgroundGrey,
+      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'لوحة تحكم PRO',
         showBackButton: true,
@@ -60,7 +60,7 @@ class ProDashboardScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                gradient: AppColors.goldGradient,
+                gradient: Colors.amber,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
