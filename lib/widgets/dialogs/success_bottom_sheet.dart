@@ -32,7 +32,7 @@ class SuccessBottomSheet extends StatelessWidget {
             width: 80,
             height: 80,
             decoration: BoxDecoration(
-              gradient: Colors.amber,
+              gradient: AppColors.goldGradient,
               shape: BoxShape.circle,
             ),
             child: Icon(icon, color: Colors.white, size: 40),

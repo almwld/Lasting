@@ -62,7 +62,7 @@ class MarketCard extends StatelessWidget {
               const SizedBox(height: 4),
               Row(
                 children: [
-                  Icon(Icons.star, color: Colors.amber, size: 14),
+                  Icon(Icons.star, color: AppColors.goldGradient, size: 14),
                   const SizedBox(width: 4),
                   Text(
                     market.rating.toStringAsFixed(1),
@@ -127,7 +127,7 @@ class MarketCard extends StatelessWidget {
                     const SizedBox(height: 6),
                     Row(
                       children: [
-                        Icon(Icons.star, color: Colors.amber, size: 14),
+                        Icon(Icons.star, color: AppColors.goldGradient, size: 14),
                         const SizedBox(width: 4),
                         Text(
                           market.rating.toStringAsFixed(1),

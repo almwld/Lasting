@@ -61,7 +61,7 @@ class ProDashboardScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
 //               decoration: BoxDecoration(
-//                 gradient: Colors.amber,
+//                 gradient: AppColors.goldGradient,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(

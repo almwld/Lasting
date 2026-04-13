@@ -89,7 +89,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                gradient: Colors.amber,
+                gradient: AppColors.goldGradient,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(

@@ -22,7 +22,7 @@ class MarketDetailsScreen extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 decoration: BoxDecoration(
-                  gradient: Colors.amber,
+                  gradient: AppColors.goldGradient,
                 ),
                 child: Center(
                   child: Icon(
@@ -93,7 +93,7 @@ class MarketDetailsScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       Row(
                         children: [
-                          const Icon(Icons.star, color: Colors.amber, size: 20),
+                          const Icon(Icons.star, color: AppColors.goldGradient, size: 20),
                           const SizedBox(width: 4),
                           Text(
                             market.rating.toStringAsFixed(1),

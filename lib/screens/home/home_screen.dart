@@ -214,7 +214,7 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
 //           gradient: isSelected && isPro
-//               ? Colors.amber
+//               ? AppColors.goldGradient
               : isSelected
                   ? null
                   : null,
@@ -467,37 +467,6 @@ class HomeScreen extends StatelessWidget {
               borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
             ),
             child: const Center(
-              child: Icon(
-                Icons.image,
-                size: 50,
-                color: AppColors.goldColor,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'منتج ${index + 1}',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 4),
-                Text(
-//                   "price.toDouble( ﷼"),
-// //                   style: const TextStyle(
-// //                     color: AppColors.goldColor,
-// //                     fontWeight: FontWeight.bold,
-// //                   ),
-// //                 ),
-//               ],
-            ),
-          ),
-        ],
-      ),
     );
   }
 
@@ -698,41 +667,3 @@ class HomeScreen extends StatelessWidget {
 //                           top: Radius.circular(12),
 //                         ),
 //                       ),
-//                       child: const Center(
-//                         child: Icon(
-//                           Icons.school,
-//                           size: 50,
-//                           color: AppColors.info,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'دورة ${index + 1}',
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            'مجاناً',
-                            style: TextStyle(
-                              color: AppColors.goldColor,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-        ),
-      ],
-    );
-  }
-}

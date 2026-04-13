@@ -63,7 +63,7 @@ class ReferralScreen extends StatelessWidget {
                     children: [
                       Expanded(child: _buildStatCard('الأصدقاء المدعوين', '12', Icons.person_add, Colors.blue)),
                       const SizedBox(width: 12),
-                      Expanded(child: _buildStatCard('النقاط المكتسبة', '1,200', Icons.star, Colors.amber)),
+                      Expanded(child: _buildStatCard('النقاط المكتسبة', '1,200', Icons.star, AppColors.goldGradient)),
                     ],
                   ),
                   const SizedBox(height: 24),

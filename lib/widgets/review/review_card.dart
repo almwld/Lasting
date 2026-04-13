@@ -42,7 +42,7 @@ class StarRating extends StatelessWidget {
           child: Icon(
             icon,
             size: size,
-            color: color ?? Colors.amber[700],
+            color: color ?? AppColors.goldGradient[700],
           ),
         );
       }),

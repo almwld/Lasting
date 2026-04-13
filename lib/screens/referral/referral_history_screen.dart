@@ -176,7 +176,7 @@ class ReferralHistoryFullScreen extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(Icons.star, size: 12, color: Colors.amber),
+                      const Icon(Icons.star, size: 12, color: AppColors.goldGradient),
                       const SizedBox(width: 4),
                       Text(
                         '+${referral.points}',

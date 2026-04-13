@@ -26,7 +26,7 @@ class SellerDashboard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                gradient: Colors.amber,
+                gradient: AppColors.goldGradient,
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Row(

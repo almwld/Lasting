@@ -21,7 +21,7 @@ class UserProfileHeader extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        gradient: Colors.amber,
+        gradient: AppColors.goldGradient,
         borderRadius: const BorderRadius.vertical(bottom: Radius.circular(24)),
       ),
       child: Column(

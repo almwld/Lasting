@@ -126,7 +126,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     vertical: 8,
                   ),
                   decoration: BoxDecoration(
-                    gradient: Colors.amber,
+                    gradient: AppColors.goldGradient,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
@@ -217,32 +217,3 @@ class _SearchScreenState extends State<SearchScreen> {
       _isSearching = true;
     });
 
-    // Simulate search delay
-    await Future.delayed(const Duration(milliseconds: 500));
-
-//     // Mock results
-//     final results = [
-//       ProductModel(
-//         id: '1',
-//         name: 'برجر دجاج كبير',
-//         price: 2500,
-//         marketName: 'مطعم الأصالة',
-// //         marketId: '1',
-// //         categoryId: '1',
-// //       ),
-// //       ProductModel(
-// //         id: '2',
-// //         name: 'برجر لحم مع جبن',
-// //         price: 3500,
-// //         marketName: 'برجر كنغ',
-// //         marketId: '2',
-// //         categoryId: '1',
-// //       ),
-// //     ];
-// 
-//     setState(() {
-      _searchResults = results;
-      _isSearching = false;
-    });
-  }
-}

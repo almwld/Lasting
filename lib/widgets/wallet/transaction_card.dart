@@ -35,7 +35,7 @@ class TransactionCard extends StatelessWidget {
                       ? const LinearGradient(colors: [Color(0xFF4CAF50), Color(0xFF2E7D32)])
                       : isWithdraw
                           ? const LinearGradient(colors: [Color(0xFFE53935), Color(0xFFB71C1C)])
-                          : Colors.amber,
+                          : AppColors.goldGradient,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(

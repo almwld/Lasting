@@ -36,7 +36,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Future<void> _register() async {
     if (!_acceptTerms) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
+        const SnackBar(content: Text("يرجى قبول الشروط والأحكام"),
 //           content: Text('يرجى قبول الشروط والأحكام'),
 //           backgroundColor: AppColors.warning,
         ),
@@ -58,7 +58,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         Navigator.pushReplacementNamed(context, '/main');
       } else if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
+          const SnackBar(content: Text("يرجى قبول الشروط والأحكام"),
             content: Text('فشل في إنشاء الحساب. يرجى المحاولة مرة أخرى.'),
             backgroundColor: AppColors.error,
           ),

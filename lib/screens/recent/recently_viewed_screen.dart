@@ -177,7 +177,7 @@ class _ProductCard extends StatelessWidget {
                   const SizedBox(height: 4),
                   Row(
                     children: [
-                      Icon(Icons.star, size: 14, color: Colors.amber[700]),
+                      Icon(Icons.star, size: 14, color: AppColors.goldGradient[700]),
                       Text(' ${rating.toStringAsFixed(1)} ($reviews)'),
                     ],
                   ),

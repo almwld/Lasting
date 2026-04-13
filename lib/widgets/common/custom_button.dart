@@ -49,7 +49,7 @@ class CustomButton extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         gradient: onPressed != null
-            ? Colors.amber
+            ? AppColors.goldGradient
             : LinearGradient(
                 colors: [
                   Colors.grey.shade400,

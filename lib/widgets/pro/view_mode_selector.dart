@@ -40,7 +40,7 @@ class ViewModeSelector extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          gradient: isSelected ? Colors.amber : null,
+          gradient: isSelected ? AppColors.goldGradient : null,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Text(

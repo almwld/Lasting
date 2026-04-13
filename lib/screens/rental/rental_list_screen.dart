@@ -241,7 +241,7 @@ class RentalCard extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          const Icon(Icons.star, size: 16, color: Colors.amber),
+                          const Icon(Icons.star, size: 16, color: AppColors.goldGradient),
                           Text(
                             ' ${rental.rating.toStringAsFixed(1)}',
                             style: const TextStyle(fontWeight: FontWeight.bold),
@@ -313,7 +313,7 @@ class _RentalDetailScreenState extends State<RentalDetailScreen> {
                   const SizedBox(height: 16),
                   Row(
                     children: [
-                      const Icon(Icons.star, size: 20, color: Colors.amber),
+                      const Icon(Icons.star, size: 20, color: AppColors.goldGradient),
                       const SizedBox(width: 4),
                       const Text('4.8', style: TextStyle(fontWeight: FontWeight.bold)),
                       const SizedBox(width: 8),

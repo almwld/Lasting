@@ -183,12 +183,12 @@ class _PointsRedeemFullScreenState extends State<PointsRedeemFullScreen> {
                                   const SizedBox(height: 8),
                                   Row(
                                     children: [
-                                      Icon(Icons.star, size: 14, color: Colors.amber[700]),
+                                      Icon(Icons.star, size: 14, color: AppColors.goldGradient[700]),
                                       const SizedBox(width: 4),
                                       Text(
                                         '${reward.points} نقطة',
                                         style: TextStyle(
-                                          color: Colors.amber[700],
+                                          color: AppColors.goldGradient[700],
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),

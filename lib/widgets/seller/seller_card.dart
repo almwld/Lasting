@@ -134,7 +134,7 @@ class SellerCard extends StatelessWidget {
                         icon: Icons.star,
                         value: rating.toStringAsFixed(1),
                         label: 'تقييم',
-                        color: Colors.amber[700]!,
+                        color: AppColors.goldGradient[700]!,
                       ),
                       const SizedBox(width: 16),
                       _StatItem(

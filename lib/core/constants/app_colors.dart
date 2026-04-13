@@ -6,7 +6,7 @@ class AppColors {
   static const Color success = Color(0xFF4CAF50);
   static const Color warning = Color(0xFFFF9800);
   static const Color info = Color(0xFF2196F3);
-  static const Color error = Color(0xFFF44336);
+  static const Color errorColor = Color(0xFFF44336);
   static const Color background = Color(0xFFF5F5F5);
   static const Color backgroundGrey = Color(0xFFF5F5F5);
   static const Color backgroundDark = Color(0xFF121212);
@@ -20,6 +20,9 @@ class AppColors {
   static const Color goldLight = Color(0xFFFFE082);
   static const Color primaryColor = Color(0xFF2196F3);
   static const Color secondaryColor = Color(0xFF03DAC6);
+  static const Color scaffoldBg = Color(0xFFF5F5F5);
+  static const Color cardColor = Color(0xFFFFFFFF);
+  static const Color borderColor = Color(0xFFE0E0E0);
   
   static const LinearGradient goldGradient = LinearGradient(
     colors: [Color(0xFFFFD700), Color(0xFFFFA000)],

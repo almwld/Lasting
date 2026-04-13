@@ -67,7 +67,7 @@ class _OrdersScreenState extends State<OrdersScreen>
       'id': 'ORD-123453',
       'status': 'pending',
       'statusText': 'قيد الانتظار',
-      'statusColor': Colors.amber,
+      'statusColor': AppColors.goldGradient,
       'date': DateTime.now(),
       'total': 75000,
       'items': 2,
