@@ -24,12 +24,18 @@ jobs:
           flutter-version: '3.24.0'
           channel: 'stable'
       
+      - name: Recreate Android folder
+        run: |
+          rm -rf android
+          flutter create --platforms=android --org com.flexyemen flex_yemen
+          cp -r flex_yemen/android .
+          rm -rf flex_yemen
+      
       - name: Get dependencies
         run: flutter pub get
       
       - name: Build APK
         run: flutter build apk --release
-        continue-on-error: true
       
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
@@ -48,6 +54,13 @@ jobs:
           flutter-version: '3.24.0'
           channel: 'stable'
       
+      - name: Recreate iOS folder
+        run: |
+          rm -rf ios
+          flutter create --platforms=ios --org com.flexyemen flex_yemen
+          cp -r flex_yemen/ios .
+          rm -rf flex_yemen
+      
       - name: Get dependencies
         run: flutter pub get
       
@@ -57,4 +70,3 @@ jobs:
       
       - name: Build iOS without signing
         run: flutter build ios --release --no-codesign
-        continue-on-error: true
