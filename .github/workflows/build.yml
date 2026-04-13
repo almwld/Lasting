@@ -43,6 +43,10 @@ jobs:
           mkdir -p assets/images assets/icons/png assets/icons/svg assets/lottie
           touch .env
           
+          # التحقق من وجود المجلدات
+          ls -la android/
+          ls -la android/app/
+          
           # تحديث android/app/build.gradle
           cat > android/app/build.gradle << 'APPGRADLE'
           def localProperties = new Properties()
@@ -186,11 +190,8 @@ jobs:
           flutter pub get
           flutter build apk --release --split-per-abi
           
-          # نسخ APK إلى مسار العمل
-          mkdir -p $GITHUB_WORKSPACE/output
-          cp build/app/outputs/flutter-apk/*.apk $GITHUB_WORKSPACE/output/ 2>/dev/null || true
-          
           echo "APK build completed"
+          ls -la build/app/outputs/flutter-apk/
       
       - name: Upload Split APKs
         uses: actions/upload-artifact@v4
