@@ -44,7 +44,7 @@ class _TransactionsScreenState extends State<TransactionsScreen>
         children: [
           // Filter Tabs
           Container(
-            color: AppColors.getCardColor(context),
+            color: Theme.of(context).cardColor,
             child: TabBar(
               controller: _tabController,
               labelColor: AppColors.goldColor,
@@ -179,7 +179,7 @@ class _TransactionsScreenState extends State<TransactionsScreen>
           margin: const EdgeInsets.only(bottom: 12),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: AppColors.getCardColor(context),
+            color: Theme.of(context).cardColor,
             borderRadius: BorderRadius.circular(16),
           ),
           child: Row(
@@ -219,7 +219,7 @@ class _TransactionsScreenState extends State<TransactionsScreen>
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    '${isIncoming ? '+' : '-'}${AppCurrencyUtils.formatYemeniRial(transaction.amount)}',
+                    '${isIncoming ? '+' : '-'}${"transaction.amount ﷼"}',
                     style: TextStyle(
                       color: isIncoming ? AppColors.success : AppColors.error,
                       fontWeight: FontWeight.bold,

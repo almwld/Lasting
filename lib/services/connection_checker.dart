@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class ConnectionChecker extends ChangeNotifier {
   final Connectivity _connectivity = Connectivity();
-  StreamSubscription<List<ConnectivityResult>>? _connectivitySubscription;
+  StreamSubscription<ConnectivityResult>? _connectivitySubscription;
 
   bool _isOnline = true;
   bool _isChecking = false;
@@ -28,13 +28,13 @@ class ConnectionChecker extends ChangeNotifier {
 
   void _startMonitoring() {
     _connectivitySubscription = _connectivity.onConnectivityChanged.listen(
-      (List<ConnectivityResult> results) {
+      (ConnectivityResult results) {
         _updateConnectionStatus(results);
       },
     );
   }
 
-  Future<void> _updateConnectionStatus(List<ConnectivityResult> results) async {
+  Future<void> _updateConnectionStatus(ConnectivityResult results) async {
     final wasOnline = _isOnline;
     _isOnline = !results.contains(ConnectivityResult.none);
 
@@ -70,14 +70,14 @@ class OfflineBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ConnectionChecker>(
-      builder: (context, checker, child) {
-        if (checker.isOnline) {
-          return const SizedBox.shrink();
-        }
-        return Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+//     return Consumer<ConnectionChecker>(
+//       builder: (context, checker, child) {
+//         if (checker.isOnline) {
+//           return const SizedBox.shrink();
+//         }
+//         return Container(
+//           width: double.infinity,
+//           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
           color: Colors.red.shade700,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

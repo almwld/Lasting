@@ -90,7 +90,7 @@ class _TransferScreenState extends State<TransferScreen> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Column(
@@ -156,7 +156,7 @@ class _TransferScreenState extends State<TransferScreen> {
                   return Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: AppColors.getCardColor(context),
+                      color: Theme.of(context).cardColor,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Column(
@@ -179,7 +179,7 @@ class _TransferScreenState extends State<TransferScreen> {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          'الرصيد المتاح: ${AppCurrencyUtils.formatYemeniRial(walletProvider.balanceYER)}',
+                          'الرصيد المتاح: ${"walletProvider.balanceYER ﷼"}',
                           style: TextStyle(
                             color: AppColors.textSecondary,
                             fontSize: 12,
@@ -195,7 +195,7 @@ class _TransferScreenState extends State<TransferScreen> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: CustomTextField(
@@ -211,7 +211,7 @@ class _TransferScreenState extends State<TransferScreen> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: CustomTextField(

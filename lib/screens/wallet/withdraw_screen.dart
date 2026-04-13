@@ -102,7 +102,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          AppCurrencyUtils.formatYemeniRial(walletProvider.balanceYER),
+                          "walletProvider.balanceYER ﷼",
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 28,
@@ -119,7 +119,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Column(
@@ -188,7 +188,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: CustomTextField(
@@ -205,7 +205,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: CustomTextField(

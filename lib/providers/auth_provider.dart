@@ -89,11 +89,11 @@ class AuthProvider extends ChangeNotifier {
       email: 'guest@flexyemen.com',
       phone: '',
       userType: 'guest',
-    );
-    await login(guestData, isGuest: true);
-  }
-
-  Future<void> login(UserModel userData, {bool isGuest = false}) async {
+//     );
+//     await login(guestData, isGuest: true);
+//   }
+// 
+//   Future<void> login(UserModel userData, {bool isGuest = false}) async {
     _isLoggedIn = true;
     _isGuest = isGuest;
     _userData = userData;

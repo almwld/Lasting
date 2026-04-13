@@ -46,7 +46,7 @@ class ProProductsScreen extends StatelessWidget {
             margin: const EdgeInsets.only(bottom: 12),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: AppColors.getCardColor(context),
+              color: Theme.of(context).cardColor,
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
@@ -101,7 +101,7 @@ class ProProductsScreen extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  AppCurrencyUtils.formatYemeniRial((product['price'] as int).toDouble()),
+                  "(product['price'] as int ﷼".toDouble()),
                   style: const TextStyle(
                     color: AppColors.goldColor,
                     fontWeight: FontWeight.bold,

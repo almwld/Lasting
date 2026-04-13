@@ -158,7 +158,7 @@ class HomeScreen extends StatelessWidget {
       margin: const EdgeInsets.all(16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.getCardColor(context),
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: AppColors.goldColor.withOpacity(0.3)),
       ),
@@ -453,7 +453,7 @@ class HomeScreen extends StatelessWidget {
       width: 160,
       margin: const EdgeInsets.only(left: 12),
       decoration: BoxDecoration(
-        color: AppColors.getCardColor(context),
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -486,7 +486,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  AppCurrencyUtils.formatYemeniRial(price.toDouble()),
+                  "price.toDouble( ﷼"),
                   style: const TextStyle(
                     color: AppColors.goldColor,
                     fontWeight: FontWeight.bold,
@@ -588,7 +588,7 @@ class HomeScreen extends StatelessWidget {
                 width: 280,
                 margin: const EdgeInsets.only(left: 12),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
@@ -683,7 +683,7 @@ class HomeScreen extends StatelessWidget {
                 width: 200,
                 margin: const EdgeInsets.only(left: 12),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(

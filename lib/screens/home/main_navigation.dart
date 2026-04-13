@@ -4,9 +4,9 @@ import '../../core/constants/app_colors.dart';
 import '../../core/utils/currency_utils.dart';
 import '../../providers/view_mode_provider.dart';
 import '../../providers/wallet_provider.dart';
-import 'wallet_screen.dart';
+// import 'wallet_screen.dart';
 import 'home_screen.dart';
-import 'profile/profile_screen.dart';
+// import 'profile/profile_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
@@ -19,10 +19,10 @@ class _MainNavigationState extends State<MainNavigation> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    const HomeScreen(),
-    const WalletScreen(),
-    const ProfileScreen(),
-  ];
+//     const HomeScreen(),
+//     const WalletScreen(),
+//     const ProfileScreen(),
+//   ];
 
   @override
   Widget build(BuildContext context) {

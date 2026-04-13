@@ -113,7 +113,7 @@ class WalletScreen extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            AppCurrencyUtils.formatYemeniRial(walletProvider.balanceYER),
+            "walletProvider.balanceYER ﷼",
             style: const TextStyle(
               color: Colors.white,
               fontSize: 36,
@@ -258,7 +258,7 @@ class WalletScreen extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: AppColors.getCardColor(context),
+          color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -323,7 +323,7 @@ class WalletScreen extends StatelessWidget {
               onTap: () {},
               child: Container(
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(
@@ -391,7 +391,7 @@ class WalletScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: AppColors.getCardColor(context),
+              color: Theme.of(context).cardColor,
               borderRadius: BorderRadius.circular(12),
             ),
             child: const Center(
@@ -416,7 +416,7 @@ class WalletScreen extends StatelessWidget {
                 margin: const EdgeInsets.only(bottom: 8),
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: AppColors.getCardColor(context),
+                  color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
@@ -456,7 +456,7 @@ class WalletScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '${isIncoming ? '+' : '-'}${AppCurrencyUtils.formatYemeniRial(transaction.amount)}',
+                      '${isIncoming ? '+' : '-'}${"transaction.amount ﷼"}',
                       style: TextStyle(
                         color: isIncoming ? AppColors.success : AppColors.error,
                         fontWeight: FontWeight.bold,
