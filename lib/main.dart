@@ -11,6 +11,7 @@ import 'providers/wallet_provider.dart';
 import 'services/connection_checker.dart';
 import 'services/storage/local_storage_service.dart';
 import 'core/theme/app_theme.dart';
+import 'core/constants/app_colors.dart';
 
 // Screens
 import 'screens/splash_screen.dart';
@@ -36,19 +37,43 @@ import 'screens/categories/categories_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize storage
-  await LocalStorageService.init();
+  
+  // معالجة الأخطاء العالمية
+  FlutterError.onError = (FlutterErrorDetails details) {
+    debugPrint("=== FLUTTER ERROR ===");
+    debugPrint("Exception: ${details.exception}");
+    debugPrint("Stack: ${details.stack}");
+    debugPrint("====================");
+  };
+  
+  try {
+    // Initialize storage
+    await LocalStorageService.init();
+  } catch (e) {
+    debugPrint("Storage init error: $e");
+  }
   
   // Load environment variables
   try {
     await dotenv.load(fileName: '.env');
+    debugPrint(".env loaded successfully");
   } catch (e) {
-    debugPrint('Warning: .env file not found');
+    debugPrint('Warning: .env file not found: $e');
   }
-
-  // Initialize Supabase (delayed to not block UI)
-  _initSupabaseDelayed();
+  
+  // Initialize Supabase
+  try {
+    final url = dotenv.env['SUPABASE_URL'];
+    final anonKey = dotenv.env['SUPABASE_ANON_KEY'];
+    if (url != null && anonKey != null && url.isNotEmpty && anonKey.isNotEmpty) {
+      await Supabase.initialize(url: url, anonKey: anonKey);
+      debugPrint("Supabase initialized successfully");
+    } else {
+      debugPrint("Supabase credentials missing");
+    }
+  } catch (e) {
+    debugPrint("Supabase initialization error: $e");
+  }
 
   // System UI settings
   SystemChrome.setSystemUIOverlayStyle(
@@ -57,25 +82,13 @@ void main() async {
       statusBarIconBrightness: Brightness.light,
     ),
   );
+  
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
 
   runApp(const FlexYemenApp());
-}
-
-Future<void> _initSupabaseDelayed() async {
-  await Future.delayed(const Duration(seconds: 10));
-  try {
-    final url = dotenv.env['SUPABASE_URL'];
-    final anonKey = dotenv.env['SUPABASE_ANON_KEY'];
-    if (url != null && anonKey != null) {
-      await Supabase.initialize(url: url, anonKey: anonKey);
-    }
-  } catch (e) {
-    debugPrint('Supabase initialization error: $e');
-  }
 }
 
 class FlexYemenApp extends StatelessWidget {
@@ -128,6 +141,26 @@ class FlexYemenApp extends StatelessWidget {
               '/search': (context) => const SearchScreen(),
               '/settings': (context) => const SettingsScreen(),
               '/categories': (context) => const CategoriesScreen(),
+            },
+            errorBuilder: (context, error, stackTrace) {
+              debugPrint("Error: $error");
+              return Scaffold(
+                body: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.error_outline, size: 80, color: Colors.red),
+                      const SizedBox(height: 20),
+                      Text('حدث خطأ: ${error.toString().substring(0, 100)}'),
+                      const SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: () => Navigator.pushReplacementNamed(context, '/'),
+                        child: const Text('إعادة التشغيل'),
+                      ),
+                    ],
+                  ),
+                ),
+              );
             },
           );
         },
