@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_strings.dart';
@@ -219,27 +220,27 @@ class _SearchScreenState extends State<SearchScreen> {
     // Simulate search delay
     await Future.delayed(const Duration(milliseconds: 500));
 
-    // Mock results
-    final results = [
-      ProductModel(
-        id: '1',
-        name: 'برجر دجاج كبير',
-        price: 2500,
-        marketName: 'مطعم الأصالة',
-//         marketId: '1',
-//         categoryId: '1',
-//       ),
+//     // Mock results
+//     final results = [
 //       ProductModel(
-//         id: '2',
-//         name: 'برجر لحم مع جبن',
-//         price: 3500,
-//         marketName: 'برجر كنغ',
-//         marketId: '2',
-//         categoryId: '1',
-//       ),
-//     ];
-
-    setState(() {
+//         id: '1',
+//         name: 'برجر دجاج كبير',
+//         price: 2500,
+//         marketName: 'مطعم الأصالة',
+// //         marketId: '1',
+// //         categoryId: '1',
+// //       ),
+// //       ProductModel(
+// //         id: '2',
+// //         name: 'برجر لحم مع جبن',
+// //         price: 3500,
+// //         marketName: 'برجر كنغ',
+// //         marketId: '2',
+// //         categoryId: '1',
+// //       ),
+// //     ];
+// 
+//     setState(() {
       _searchResults = results;
       _isSearching = false;
     });

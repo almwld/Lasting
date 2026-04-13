@@ -6,29 +6,48 @@ class UserModel {
   final String? avatarUrl;
   final String? userType;
   final String? city;
-  final String? phone;
-  final int ordersCount;
-  final int favoritesCount;
-  final double rating;
-  
+
   UserModel({
+    required this.id,
+    required this.name,
+    required this.email,
     this.fullName,
     this.avatarUrl,
     this.userType,
     this.city,
-    required this.id,
-    required this.name,
-    required this.email,
-    this.phone,
-    this.ordersCount = 0,
-    this.favoritesCount = 0,
-    this.rating = 0.0,
   });
-  
+
+  factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
+    id: json['id'] ?? '',
+    name: json['name'] ?? '',
+    email: json['email'] ?? '',
+    fullName: json['fullName'],
+    avatarUrl: json['avatarUrl'],
+    userType: json['userType'],
+    city: json['city'],
+  );
+
+  UserModel copyWith({
+    String? fullName,
+    String? avatarUrl,
+    String? city,
+  }) => UserModel(
+    id: id,
+    name: name,
+    email: email,
+    fullName: fullName ?? this.fullName,
+    avatarUrl: avatarUrl ?? this.avatarUrl,
+    userType: userType ?? this.userType,
+    city: city ?? this.city,
+  );
+
   Map<String, dynamic> toJson() => {
     'id': id,
     'name': name,
     'email': email,
-    'phone': phone,
+    'fullName': fullName,
+    'avatarUrl': avatarUrl,
+    'userType': userType,
+    'city': city,
   };
 }

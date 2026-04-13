@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../core/constants/app_colors.dart';
@@ -36,8 +37,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (!_acceptTerms) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('يرجى قبول الشروط والأحكام'),
-          backgroundColor: AppColors.warning,
+//           content: Text('يرجى قبول الشروط والأحكام'),
+//           backgroundColor: AppColors.warning,
         ),
       );
       return;

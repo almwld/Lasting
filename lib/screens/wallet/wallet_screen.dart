@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../core/constants/app_colors.dart';
@@ -71,8 +72,8 @@ class WalletScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(24),
-      decoration: BoxDecoration(
-        gradient: Colors.amber,
+//       decoration: BoxDecoration(
+//         gradient: Colors.amber,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(

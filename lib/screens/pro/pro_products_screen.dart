@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/utils/currency_utils.dart';
@@ -99,14 +100,14 @@ class ProProductsScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-                Text(
-//                   "(product['price'] as int ﷼".toDouble()),
-//                   style: const TextStyle(
-//                     color: AppColors.goldColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+//                 ),
+//                 Text(
+// //                   "(product['price'] as int ﷼".toDouble()),
+// //                   style: const TextStyle(
+// //                     color: AppColors.goldColor,
+//                     fontWeight: FontWeight.bold,
+//                     fontSize: 16,
+//                   ),
                 ),
               ],
             ),

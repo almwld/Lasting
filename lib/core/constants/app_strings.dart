@@ -4,6 +4,6 @@ class AppStrings {
   static const String notifications = 'الإشعارات';
   static const String liteMode = 'الوضع البسيط';
   static const String expertMode = 'الوضع المتقدم';
+  static const String search = 'بحث';
+  static const String settings = 'الإعدادات';
 }
-static const String search = 'بحث';
-static const String settings = 'الإعدادات';

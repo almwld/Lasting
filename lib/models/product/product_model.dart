@@ -1,24 +1,24 @@
 class ProductModel {
   final String id;
-  final String? marketId;
   final String name;
   final double price;
   final double? oldPrice;
   final String? marketName;
   final bool isFavorite;
   final double? discount;
-  
+  final String? marketId;
+
   ProductModel({
     required this.id,
-    this.marketId,
     required this.name,
     required this.price,
     this.oldPrice,
     this.marketName,
     this.isFavorite = false,
     this.discount,
+    this.marketId,
   });
-  
+
   String get formattedPrice => '${price.toStringAsFixed(0)} ﷼';
   String? get formattedOldPrice => oldPrice != null ? '${oldPrice!.toStringAsFixed(0)} ﷼' : null;
 }
