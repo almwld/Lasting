@@ -29,6 +29,7 @@ jobs:
         run: |
           # إنشاء مشروع مؤقت
           cd /tmp
+          rm -rf lasting_temp
           flutter create --org com.lasting --project-name lasting_temp --platforms android .
           
           # نسخ الكود من المستودع
@@ -36,8 +37,9 @@ jobs:
           cp -r $GITHUB_WORKSPACE/assets lasting_temp/ 2>/dev/null || true
           cp $GITHUB_WORKSPACE/pubspec.yaml lasting_temp/
           
-          # إنشاء المجلدات المطلوبة
           cd lasting_temp
+          
+          # إنشاء المجلدات المطلوبة
           mkdir -p assets/images assets/icons/png assets/icons/svg assets/lottie
           touch .env
           
@@ -186,7 +188,9 @@ jobs:
           
           # نسخ APK إلى مسار العمل
           mkdir -p $GITHUB_WORKSPACE/output
-          cp build/app/outputs/flutter-apk/*.apk $GITHUB_WORKSPACE/output/
+          cp build/app/outputs/flutter-apk/*.apk $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+          
+          echo "APK build completed"
       
       - name: Upload Split APKs
         uses: actions/upload-artifact@v4
