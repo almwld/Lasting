@@ -37,15 +37,10 @@ import 'screens/categories/categories_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // تحميل المتغيرات البيئية
-  try {
-    await dotenv.load(fileName: ".env");
-    debugPrint(".env loaded successfully");
-  } catch (e) {
-    debugPrint("Warning: .env file not found: $e");
-  }
+  // تحميل المتغيرات البيئية (مع تجاهل الأخطاء)
+  await dotenv.load(fileName: ".env");
   
-  // تهيئة التخزين المحلي أولاً
+  // تهيئة التخزين المحلي
   await LocalStorageService.init();
   
   // إعدادات النظام
@@ -54,28 +49,18 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   
-  // تشغيل التطبيق فوراً
-  runApp(const FlexYemenApp());
-  
-  // تهيئة Supabase في الخلفية
-  _initSupabaseInBackground();
-}
-
-void _initSupabaseInBackground() async {
+  // تهيئة Supabase (مع انتظارها)
   try {
     final url = dotenv.env['SUPABASE_URL'];
     final anonKey = dotenv.env['SUPABASE_ANON_KEY'];
-    
-    if (url != null && anonKey != null && url.isNotEmpty && anonKey.isNotEmpty) {
+    if (url != null && anonKey != null) {
       await Supabase.initialize(url: url, anonKey: anonKey);
-      debugPrint("✅ Supabase initialized successfully");
-      debugPrint("Supabase URL: $url");
-    } else {
-      debugPrint("⚠️ Supabase credentials missing");
     }
   } catch (e) {
-    debugPrint("❌ Supabase initialization error: $e");
+    debugPrint("Supabase error: $e");
   }
+  
+  runApp(const FlexYemenApp());
 }
 
 class FlexYemenApp extends StatelessWidget {
@@ -94,18 +79,12 @@ class FlexYemenApp extends StatelessWidget {
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
           return MaterialApp(
-            title: 'Flex Yemen - فلكس يمن',
+            title: 'Flex Yemen',
             debugShowCheckedModeBanner: false,
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
             themeMode: themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
             locale: const Locale('ar', 'YE'),
-            builder: (context, child) {
-              return Directionality(
-                textDirection: TextDirection.rtl,
-                child: child!,
-              );
-            },
             initialRoute: '/',
             routes: {
               '/': (context) => const SplashScreen(),
