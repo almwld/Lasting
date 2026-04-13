@@ -41,10 +41,6 @@ jobs:
           mkdir -p assets/images assets/icons/png assets/icons/svg assets/lottie assets/fonts
           touch .env
           
-          if [ -d "$GITHUB_WORKSPACE/assets/fonts" ]; then
-            cp -r $GITHUB_WORKSPACE/assets/fonts/* assets/fonts/ 2>/dev/null || true
-          fi
-          
           # تحديث Kotlin version
           sed -i 's/ext.kotlin_version = .*/ext.kotlin_version = "2.0.21"/' android/build.gradle
           sed -i 's/id "org.jetbrains.kotlin.android" version ".*"/id "org.jetbrains.kotlin.android" version "2.0.21" apply false/' android/settings.gradle
@@ -52,7 +48,7 @@ jobs:
           # تحديث minSdkVersion
           sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 21/' android/app/build.gradle
           
-          # إعادة كتابة android/app/build.gradle بالكامل مع desugaring صحيح
+          # إعادة كتابة android/app/build.gradle بالكامل
           cat > android/app/build.gradle << 'APPGRADLE'
           def localProperties = new Properties()
           def localPropertiesFile = rootProject.file('local.properties')
