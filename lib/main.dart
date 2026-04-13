@@ -34,6 +34,7 @@ import 'screens/notifications/notifications_screen.dart';
 import 'screens/search/search_screen.dart';
 import 'screens/settings/settings_screen.dart';
 import 'screens/categories/categories_screen.dart';
+import 'screens/error_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -141,26 +142,6 @@ class FlexYemenApp extends StatelessWidget {
               '/search': (context) => const SearchScreen(),
               '/settings': (context) => const SettingsScreen(),
               '/categories': (context) => const CategoriesScreen(),
-            },
-            errorBuilder: (context, error, stackTrace) {
-              debugPrint("Error: $error");
-              return Scaffold(
-                body: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(Icons.error_outline, size: 80, color: Colors.red),
-                      const SizedBox(height: 20),
-                      Text('حدث خطأ: ${error.toString().substring(0, 100)}'),
-                      const SizedBox(height: 20),
-                      ElevatedButton(
-                        onPressed: () => Navigator.pushReplacementNamed(context, '/'),
-                        child: const Text('إعادة التشغيل'),
-                      ),
-                    ],
-                  ),
-                ),
-              );
             },
           );
         },
