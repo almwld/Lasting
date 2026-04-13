@@ -45,12 +45,8 @@ class ProDashboardScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildStatsSection(BuildContext context, ViewModeProvider viewMode) {
-//   final stats = [
-//     {'title': 'مستخدمين نشطين', 'value': '12,458', 'icon': Icons.people, 'color': AppColors.info},
-//     {'title': 'طلبات يومية', 'value': '2,156', 'icon': Icons.shopping_cart, 'color': AppColors.success},
-//     {'title': 'مبيعات', 'value': '45.2M', 'icon': Icons.attach_money, 'color': AppColors.goldColor},
-      {'title': 'بائعون جدد', 'value': '156', 'icon': Icons.store, 'color': AppColors.primaryColor},
+    final stats = [
+      {"title": "بائعون جدد", "value": "156", "icon": Icons.store, "color": AppColors.primaryColor},
     ];
 
     return Column(

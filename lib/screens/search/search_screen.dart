@@ -217,3 +217,13 @@ class _SearchScreenState extends State<SearchScreen> {
       _isSearching = true;
     });
 
+
+    // Mock search implementation
+    await Future.delayed(const Duration(milliseconds: 500));
+    
+    setState(() {
+      _searchResults = [];
+      _isSearching = false;
+    });
+  }
+}

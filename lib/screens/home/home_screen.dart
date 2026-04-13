@@ -455,15 +455,13 @@ class HomeScreen extends StatelessWidget {
       margin: const EdgeInsets.only(left: 12),
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
-        borderRadius: BorderRadius.circular(16),
-      ),
-            child: const Center(child: Icon(Icons.image, color: AppColors.goldColor, size: 50)),
+            decoration: BoxDecoration(
               color: AppColors.goldColor.withOpacity(0.1),
               borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
             ),
             child: const Center(
-    );
-  }
+              child: Icon(Icons.image, color: AppColors.goldColor, size: 50),
+            ),
 
   Widget _buildOffersSection(BuildContext context) {
     return Container(
@@ -644,21 +642,18 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             itemCount: 4,
             itemBuilder: (context, index) {
-              return Container(
-                width: 200,
-                margin: const EdgeInsets.only(left: 12),
-                decoration: BoxDecoration(
-                  color: Theme.of(context).cardColor,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
                     Container(
                       height: 100,
-//                     decoration: BoxDecoration(
-//                       color: AppColors.info.withOpacity(0.1),
-//                       borderRadius: const BorderRadius.vertical(
-//                         top: Radius.circular(12),
+                      decoration: BoxDecoration(
+                        color: AppColors.info.withOpacity(0.1),
+                        borderRadius: const BorderRadius.vertical(
+                          top: Radius.circular(12),
+                        ),
+                      ),
+                      child: const Center(
+                        child: Icon(Icons.school, size: 50, color: AppColors.info),
+                      ),
+                    ),
 //                       ),
 //                     ),
+}

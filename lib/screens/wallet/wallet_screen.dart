@@ -19,9 +19,6 @@ class WalletScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    return Scaffold(
-      backgroundColor: isDark ? Colors.black87 : Colors.grey.shade100,
       appBar: CustomAppBar(
         title: 'المحفظة',
         showBackButton: false,

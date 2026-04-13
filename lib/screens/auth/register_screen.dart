@@ -37,9 +37,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (!_acceptTerms) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("يرجى قبول الشروط والأحكام")),
-        ),
       );
-      return;
     }
 
     if (_formKey.currentState?.validate() ?? false) {
@@ -57,12 +55,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
       } else if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text("يرجى قبول الشروط والأحكام"),
-            content: Text('فشل في إنشاء الحساب. يرجى المحاولة مرة أخرى.'),
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("فشل في إنشاء الحساب. يرجى المحاولة مرة أخرى."),
             backgroundColor: AppColors.errorColor,
           ),
         );
-      }
-    }
   }
 
   @override
