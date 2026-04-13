@@ -2,15 +2,26 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // الألوان الأساسية
-  static const Color primary = Color(0xFF6C63FF);
-  static const Color secondary = Color(0xFFFF6B6B);
-  static const Color accent = Color(0xFF4ECDC4);
-  static const Color warning = Color(0xFFF39C12);
-  static const Color success = Color(0xFF2ECC71);
-  static const Color error = Color(0xFFE74C3C);
-  static const Color gold = Color(0xFFD4AF37);
+  static const Color primaryColor = Color(0xFF6C63FF);
+  static const Color secondaryColor = Color(0xFFFF6B6B);
+  static const Color accentColor = Color(0xFF4ECDC4);
+  static const Color warningColor = Color(0xFFF39C12);
+  static const Color successColor = Color(0xFF2ECC71);
+  static const Color errorColor = Color(0xFFE74C3C);
+  
+  // الألوان الذهبية
+  static const Color goldColor = Color(0xFFD4AF37);
   static const Color goldDark = Color(0xFFC6A700);
   static const Color goldLight = Color(0xFFF4D03F);
+  
+  // الألوان القديمة (للتوافق)
+  static const Color primary = primaryColor;
+  static const Color secondary = secondaryColor;
+  static const Color accent = accentColor;
+  static const Color warning = warningColor;
+  static const Color success = successColor;
+  static const Color error = errorColor;
+  static const Color gold = goldColor;
 
   // الثيمات
   static const Color background = Color(0xFFF5F5F5);
@@ -18,6 +29,7 @@ class AppColors {
   static const Color scaffoldBg = Color(0xFFF8F9FA);
   static const Color cardColor = Color(0xFFFFFFFF);
   static const Color borderColor = Color(0xFFE0E0E0);
+  static const Color dividerColor = Color(0xFFEEEEEE);
 
   // النصوص
   static const Color textPrimary = Color(0xFF1A1A2E);
@@ -27,19 +39,19 @@ class AppColors {
 
   // التدرجات
   static const LinearGradient goldGradient = LinearGradient(
-    colors: [gold, goldLight],
+    colors: [goldColor, goldLight],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
 
   static const LinearGradient primaryGradient = LinearGradient(
-    colors: [primary, Color(0xFF8B82FF)],
+    colors: [primaryColor, Color(0xFF8B82FF)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
 
   static const LinearGradient accentGradient = LinearGradient(
-    colors: [accent, Color(0xFF6DD5ED)],
+    colors: [accentColor, Color(0xFF6DD5ED)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
